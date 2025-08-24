@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { color-scheme: light dark; }
+
+html, body, #root { height: 100%; }
+body { margin: 0; }
+
+.token-preview { word-break: break-word; text-wrap: pretty; }
+
+.animate-pulse-slow { animation: pulseSlow 1.2s cubic-bezier(.4,0,.6,1) infinite; }
+@keyframes pulseSlow { 0%,100%{opacity:.5;} 50%{opacity:1;} }
+
+/* Таблицы из анализа/чата: не ломать верстку, давать скролл */
+.prose table, .analysis table, .data {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.prose th, .analysis th, .data th,
+.prose td, .analysis td, .data td {
+  border: 1px solid var(--tbl-b, rgba(120,120,120,.2));
+  padding: .5rem .6rem;
+  white-space: nowrap;
+}
