@@ -75,10 +75,17 @@ For charts and tables in responses, add Chart.js to your `index.html`:
 
 ```
 src/
+src/
 ├── App.tsx          # Main application component
 ├── App.css          # Application styles
 ├── main.tsx         # Entry point
-└── assets/          # Static assets
+├── index.css        # Tailwind and global styles
+├── vite-env.d.ts    # Vite type definitions
+├── assets/          # Static assets (e.g., react.svg)
+├── components/      # UI components (Composer, Header, Sidebar, Toasts, Tour, ui)
+├── hooks/           # Custom React hooks (useChats, useGeminiClient, useToasts, useTour)
+└── utils/           # Utility functions (index.ts)
+ 
 ```
 
 ## Technologies Used
